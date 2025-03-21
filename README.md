@@ -55,7 +55,8 @@ This is a backend service for managing bank accounts and handling transactions. 
         "updatedOn": "2025-03-21T09:45:00"
       }
       ```
-
+<img width="798" alt="image" src="https://github.com/user-attachments/assets/ca98ea37-b9fe-4b2b-a65a-ca6865594d20" />
+<img width="871" alt="image" src="https://github.com/user-attachments/assets/77f50c8b-6653-4be3-ba90-1d989d1c54e1" />
 ---
 
 ### **Transaction APIs**
@@ -121,6 +122,9 @@ This is a backend service for managing bank accounts and handling transactions. 
 
     - **Description:**  
       This API endpoint fetches a list of transactions associated with the given account ID.
+
+<img width="927" alt="image" src="https://github.com/user-attachments/assets/8ee34691-2968-4bf9-be9d-eb91ad2ccb34" />
+![Uploading image.png…]()
 
 ---
 
