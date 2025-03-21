@@ -124,7 +124,7 @@ This is a backend service for managing bank accounts and handling transactions. 
       This API endpoint fetches a list of transactions associated with the given account ID.
 
 <img width="927" alt="image" src="https://github.com/user-attachments/assets/8ee34691-2968-4bf9-be9d-eb91ad2ccb34" />
-![Uploading image.png…]()
+<img width="601" alt="image" src="https://github.com/user-attachments/assets/b4b474b2-3892-4aac-bb55-0e383222ba31" />
 
 ---
 
@@ -177,6 +177,7 @@ The API comes with integrated Swagger UI for API documentation and testing. You 
 ---
 
 ## **Project Structure**
+![Uploading image.png…]()
 
 ### **Core Packages:**
 
