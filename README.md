@@ -134,16 +134,22 @@ To access the H2 Console, use the following URL after starting the application:
 - **Username:** `sa`
 - **Password:** (leave empty by default)
 
+<img width="429" alt="image" src="https://github.com/user-attachments/assets/84c1063b-d4d6-4a74-8454-bb509dc07af8" />
+<img width="1233" alt="image" src="https://github.com/user-attachments/assets/b7e2761b-9ae9-4463-8aa4-c44212fb2665" />
+<img width="1221" alt="image" src="https://github.com/user-attachments/assets/dac41520-54da-4b29-81c3-228af7aa4ce0" />
+
 ---
 
 ## **Swagger Documentation**
 
 The API comes with integrated Swagger UI for API documentation and testing. You can access it at:  
 **[Swagger UI](http://localhost:8080/swagger-ui.html)**
+<img width="1583" alt="image" src="https://github.com/user-attachments/assets/2d78fdb7-e3d4-41bf-8298-bd671db5bcdc" />
 
 ---
 
 ## **Tests and Their Locations**
+<img width="374" alt="image" src="https://github.com/user-attachments/assets/99850881-f033-430c-aa96-7d95a558e728" />
 
 ### 1. **Unit Tests**
 - **Purpose:** Test individual methods and functionalities in isolation.
@@ -176,8 +182,3 @@ The API comes with integrated Swagger UI for API documentation and testing. You 
 
 ## **Author**
 Developed by **Naman Sisodia**.
-
----
-
-## **License**
-This project is licensed under the [MIT License](LICENSE).
