@@ -134,6 +134,7 @@ To access the H2 Console, use the following URL after starting the application:
 - **Username:** `sa`
 - **Password:** (leave empty by default)
 
+<img width="547" alt="image" src="https://github.com/user-attachments/assets/7761e12c-c80d-41b0-9418-427e19a7046f" />
 <img width="429" alt="image" src="https://github.com/user-attachments/assets/84c1063b-d4d6-4a74-8454-bb509dc07af8" />
 <img width="1233" alt="image" src="https://github.com/user-attachments/assets/b7e2761b-9ae9-4463-8aa4-c44212fb2665" />
 <img width="1221" alt="image" src="https://github.com/user-attachments/assets/dac41520-54da-4b29-81c3-228af7aa4ce0" />
