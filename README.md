@@ -8,14 +8,176 @@ This is a backend service for managing bank accounts and handling transactions. 
 
 ### **Account APIs**
 
-- **Create a new account**  
-  **POST** `/api/accounts`  
-  **Request Body:**
-  ```json
-  {
-    "accountHolderName": "John Doe",
-    "accountNumber": "123456789012",
-    "ifscCode": "ABC12345678",
-    "accountType": "SAVINGS",
-    "balance": 1000.00
-  }
+1. **Create a New Account**
+    - **Endpoint:**  
+      **POST** `/api/accounts`
+
+    - **Request Body:**
+      ```json
+      {
+        "accountHolderName": "Rajesh Kumar",
+        "accountNumber": "987654321098",
+        "ifscCode": "HDFC0001234",
+        "accountType": "CURRENT",
+        "balance": 5000.00
+      }
+      ```
+
+    - **Response:**
+      ```json
+      {
+        "accountId": "8f47a62c-1234-4567-8901-fedcba098765"
+      }
+      ```
+
+    - **Description:**  
+      This API endpoint creates a new bank account with the given details.
+
+---
+
+2. **Get Account by ID**
+    - **Endpoint:**  
+      **GET** `/api/accounts/{accountId}`
+
+    - **Path Parameter:**
+        - `accountId`: The UUID of the account.
+
+    - **Response:**
+      ```json
+      {
+        "accountId": "123e4567-e89b-12d3-a456-426614174000",
+        "accountHolderName": "Sneha Nair",
+        "accountNumber": "445566778899",
+        "ifscCode": "SBI12345678",
+        "accountType": "CURRENT",
+        "balance": 120000.00,
+        "createdOn": "2025-03-20T11:15:00",
+        "updatedOn": "2025-03-21T09:45:00"
+      }
+      ```
+
+---
+
+### **Transaction APIs**
+
+1. **Create a New Transaction**
+    - **Endpoint:**  
+      **POST** `/api/transactions`
+
+    - **Request Body:**
+      ```json
+      {
+        "amount": 1000.00,
+        "transactionType": "CREDIT",
+        "transactionDate": "2025-03-21T14:30:00",
+        "accountId": "123e4567-e89b-12d3-a456-426614174000"
+      }
+      ```
+
+    - **Response:**
+      ```json
+      {
+        "transactionId": "9f21c62c-9876-5432-1234-fedcba098765"
+      }
+      ```
+
+    - **Description:**  
+      This API endpoint creates a new transaction (credit or debit) for a specified account.
+
+    - **Notes:**
+        - `amount`: The transaction amount (must be a non-negative decimal).
+        - `transactionType`: Can be either `CREDIT` or `DEBIT`.
+        - `transactionDate`: The date and time when the transaction took place.
+        - `accountId`: The UUID of the account to which this transaction is linked.
+
+---
+
+2. **Get Transactions by Account ID**
+    - **Endpoint:**  
+      **GET** `/api/transactions/{accountId}`
+
+    - **Path Parameter:**
+        - `accountId`: The UUID of the account whose transactions are to be retrieved.
+
+    - **Response:**
+      ```json
+      [
+        {
+          "transactionId": "9f21c62c-9876-5432-1234-fedcba098765",
+          "amount": 1000.00,
+          "transactionType": "CREDIT",
+          "transactionDate": "2025-03-21T14:30:00",
+          "accountId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        {
+          "transactionId": "4f32d11a-5678-4321-9876-cba098765432",
+          "amount": 500.00,
+          "transactionType": "DEBIT",
+          "transactionDate": "2025-03-21T15:45:00",
+          "accountId": "123e4567-e89b-12d3-a456-426614174000"
+        }
+      ]
+      ```
+
+    - **Description:**  
+      This API endpoint fetches a list of transactions associated with the given account ID.
+
+---
+
+## **H2 Database Console**
+
+The application uses **H2 In-Memory Database** for easy testing and demo purposes.  
+To access the H2 Console, use the following URL after starting the application:  
+**[H2 Database Console](http://localhost:8080/h2-console)**
+
+- **JDBC URL:** `jdbc:h2:mem:testdb`
+- **Username:** `sa`
+- **Password:** (leave empty by default)
+
+---
+
+## **Swagger Documentation**
+
+The API comes with integrated Swagger UI for API documentation and testing. You can access it at:  
+**[Swagger UI](http://localhost:8080/swagger-ui.html)**
+
+---
+
+## **Tests and Their Locations**
+
+### 1. **Unit Tests**
+- **Purpose:** Test individual methods and functionalities in isolation.
+- **Location:**
+    - `src/test/java/com/allica/backend/services`
+    - Example tests include `AccountServiceTest` and `TransactionServiceTest`.
+
+### 2. **Integration Tests**
+- **Purpose:** Test the integration between various components (e.g., controllers, services, and repositories) and ensure they work together as expected.
+- **Location:**
+    - `src/test/java/com/allica/backend/integration`
+    - Example tests include `AccountControllerIntegrationTest` and `TransactionControllerIntegrationTest`.
+
+### 3. **API Tests**
+- **Purpose:** Test the REST APIs end-to-end, including input validation, response structure, and error handling.
+- **Location:**
+    - `src/test/java/com/allica/backend/controllers`
+    - Example tests include `AccountControllerTest` and `TransactionControllerTest`.
+
+---
+
+## **Technologies Used**
+- **Spring Boot** – Backend framework
+- **JPA/Hibernate** – For database interaction
+- **H2 Database** – In-memory database (for testing)
+- **Swagger/OpenAPI** – API documentation
+- **JUnit 5** – Unit, integration, and API testing
+
+---
+
+## **Author**
+Developed by **Naman Sisodia**.
+
+---
+
+## **License**
+This project is licensed under the [MIT License](LICENSE).
