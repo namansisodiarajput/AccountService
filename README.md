@@ -176,6 +176,40 @@ The API comes with integrated Swagger UI for API documentation and testing. You 
 
 ---
 
+## **Project Structure**
+
+### **Core Packages:**
+
+1. **Controllers** – Handle REST APIs.
+   - Location: `src/main/java/com/allica/backend/controllers`
+   - Example: `AccountController`, `TransactionController`
+
+2. **Entities** – Represent database tables.
+   - Location: `src/main/java/com/allica/backend/entities`
+   - Example: `AccountEntity`, `TransactionEntity`
+
+3. **Enums** – Define constants.
+   - Location: `src/main/java/com/allica/backend/enums`
+   - Example: `AccountType`, `TransactionType`
+
+4. **Exceptions** – Handle custom errors.
+   - Location: `src/main/java/com/allica/backend/exceptions`
+   - Example: `AccountNotFoundException`, `InsufficientBalanceException`
+
+5. **Mappers** – Convert DTOs to entities.
+   - Location: `src/main/java/com/allica/backend/mappers`
+   - Example: `AccountMapper`, `TransactionMapper`
+
+6. **Repositories** – Manage database operations.
+   - Location: `src/main/java/com/allica/backend/repositories`
+   - Example: `AccountRepository`, `TransactionRepository`
+
+7. **Services** – Implement business logic.
+   - Location: `src/main/java/com/allica/backend/services`
+   - Example: `AccountService`, `TransactionService`
+
+---
+
 ## **Technologies Used**
 - **Spring Boot** – Backend framework
 - **JPA/Hibernate** – For database interaction
