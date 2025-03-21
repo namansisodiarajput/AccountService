@@ -177,9 +177,9 @@ The API comes with integrated Swagger UI for API documentation and testing. You 
 ---
 
 ## **Project Structure**
-![Uploading image.png…]()
 
 ### **Core Packages:**
+<img width="601" alt="image" src="https://github.com/user-attachments/assets/04def3c7-f361-426a-83ea-91242dc74907" />
 
 1. **Controllers** – Handle REST APIs.
    - Location: `src/main/java/com/allica/backend/controllers`
